@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FLEX DIS</title>
+	<style>
+		.flex-container {
+			width: 90%;
+			padding: 10px;
+			border: solid 1px red;
+
+			-webkit-display: flex;
+			-ms-display: flexbox;
+			display: flex;
+			
+			/*-webkit-flex-flow: row nowrap;
+			-ms-flex-flow: row nowrap;
+			flex-flow: row wrap;*/
+				/*row; automatic*/
+				/*row-reverse; backwards order*/
+				/*column; displays in column*/
+				/*column-reverse; last displayed at top*/
+			
+			/*-webkit-justify-content: space-between;
+			-ms-flexpack: justify; start, end, center, justify
+			justify-content: space-between; */
+				/*flex-start, flex-end, center, space-around, space-between*/
+
+
+			/*-webkit-align-items: center;
+			-ms-flex-align: center; start, ed, center, baseline
+			align-items: center;*/
+				/*stretch (default), flex-start, flex-end, center, baseline*/
+
+		}
+
+		.flex-container section {
+			background: rgba(171,208,200,0.8);
+			border: solid 1px red;
+			padding: 10px;
+			margin: 0 1%;
+			flex: 1;
+		}
+
+		.flex-container section:nth-of-type(2n) {
+			flex: 2; /* the second section is worth 6 columns, and 1st and last get 3*/
+		}
+
+		@media only screen and (max-width: 480px) {
+			.flex-container {
+				-webkit-flex-flow: column;
+				-ms-flex-flow: column;
+				flex-flow: column;
+			}
+		}
+
+
+	</style>
+
+
+</head>
+<body>
+	<header>
+		<h1>FLEX IT</h1>
+	</header>
+	<!-- main>section*3>h2+p*2>lorem -->
+	<main class="flex-container">
+		<section>
+			<h2>UNO</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit dolore sunt quae nam molestiae itaque ab vitae veritatis reprehenderit quasi praesentium doloremque id non reiciendis vel, corrupti, voluptates omnis eius.</p>
+			<p>Eos modi libero, explicabo in impedit ut deserunt dolor ipsa error laborum, quia, suscipit ipsum officiis saepe enim tenetur reprehenderit facere eaque eius molestiae excepturi. At libero voluptatem eum eveniet.</p>
+		</section>
+		<section>
+			<h2>DOS</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor modi reiciendis sequi, incidunt minima quia repellendus quas, excepturi repudiandae possimus, quae maiores quasi laudantium. Modi, fuga, illo! Quidem, quia ducimus.</p>
+			<p>Rem id facilis molestiae minima dolorem perferendis omnis, error, possimus fuga odit, vero alias. Optio possimus fugiat nostrum atque, quae sapiente aliquid pariatur labore dolor excepturi quos provident expedita deleniti?</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor modi reiciendis sequi, incidunt minima quia repellendus quas, excepturi repudiandae possimus, quae maiores quasi laudantium. Modi, fuga, illo! Quidem, quia ducimus.</p>
+			<p>Rem id facilis molestiae minima dolorem perferendis omnis, error, possimus fuga odit, vero alias. Optio possimus fugiat nostrum atque, quae sapiente aliquid pariatur labore dolor excepturi quos provident expedita deleniti?</p>
+
+		</section>
+		<section>
+			<h2>TRES</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae incidunt minus at provident debitis quas sit rem, temporibus magni nihil ea, explicabo sequi impedit ipsam libero, quos illum dolor. Quod?</p>
+			<p>Molestiae et magnam tempore modi, quia illum quidem eius repellendus repellat sequi voluptatem, iure ex dolore quod esse cupiditate sunt accusantium eum vel laudantium possimus, ipsa dolorum reprehenderit? Vero, esse.</p>
+		</section>
+	</main>
+</body>
+</html>
